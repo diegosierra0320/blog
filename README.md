@@ -1,11 +1,36 @@
+# Blog API
+
+ - Front:
+    - Obtener todas las publicaciones
+    - Obtener una publicacion en especifico
+    - Obtener todas las categorias
+    - Obtener todos los posts de una caterogia especifica
+    - Obtener tofos los post que he creado
+    - Obtener todos los posts de usuario en especifico
+    - Podemos paginar los posts 
+    - Acciones de CRUD sobre Posts
+    - Crear categorias
 
 
-SORT
-1. app.js
-2. .env
-3. config.js
-4. database.js
-5. modelos
-6. controladores
-7. servicios
-8. rutas
+// json
+    {
+        "total": 68,
+        "prev": "localhost:9000/api/v1/posts?start=51&limit=60",
+        "next": "localhost:9000/api/v1/posts?start=61&limit=68",
+        "data": [
+            {
+                "id": "0c4c00df-e60a-4c98-92f7-a5cab86a099b",
+                "title": "ejemplo"
+                "content": "lorem ipsum"
+                "createdBy": {
+                    "id": "e2bfdd7c-eec0-4bb4-9ded-7c8d08559b60",
+                    "name": "Diego",
+                    "email": "diego.sierra0320@gmail.com"
+                },
+                "category": {
+                    "id": 4,
+                    "name": "Tecnologia"
+                }
+            }
+        ]
+    }

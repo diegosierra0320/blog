@@ -7,6 +7,9 @@ const {port} = require('./config')
 const userRouter = require('./users/users.router')
 const authRouter = require('./auth/auth.router')
 const initModels = require('./models/initModels')
+const categoryRouter = require('./categories/categories.router')
+const postRouter = require('./posts/posts.router')
+
 
 // Initial configs
 const app = express()
@@ -40,6 +43,8 @@ app.get('/', (req, res) => {
   
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/auth', authRouter)
+app.use('/api/v1/categories', categoryRouter)
+app.use('/api/v1/posts', postRouter)
 
 
 app.listen(port, () => {
